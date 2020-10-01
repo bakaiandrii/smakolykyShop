@@ -9,12 +9,13 @@ import * as dotenv from 'dotenv';
 import * as morgan from 'morgan';
 import * as mongoose from 'mongoose';
 import * as path from 'path';
+import {userRouter} from './routes';
 
 dotenv.config();
 
 const serverRequestLimit = rateLimit({
-  windowMs: 10000,
-  max: 100 //TODO
+  windowMs: config.serverRateLimits.period,
+  max: config.serverRateLimits.maxRequests
 });
 
 class App {
@@ -70,10 +71,10 @@ class App {
   };
 
   private mountRoutes(): void{
-    this.app.use('/admin', adminRouter);
-    this.app.use('/auth', authRouter);
-    this.app.use('/product', productsRouter);
-    this.app.use('/user', usersRouter);
+    // this.app.use('/admin', adminRouter);
+    // this.app.use('/auth', authRouter);
+    // this.app.use('/product', productsRouter);
+    this.app.use('/users', userRouter);
   }
 }
 

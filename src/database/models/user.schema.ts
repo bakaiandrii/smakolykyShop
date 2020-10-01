@@ -1,6 +1,10 @@
 import {Document, Model, model, Schema} from 'mongoose';
+import {IUser} from '../../models';
+import {UserRoleEnum, UserStatusEnum} from '../../constants';
 
-export const UserSchema: Schema = new Schema<any>({ //TODO interface
+export type UserType = IUser & Document
+
+export const UserSchema: Schema = new Schema<IUser>({ //TODO interface
   name: {
     type: String,
     required: true,
@@ -17,7 +21,7 @@ export const UserSchema: Schema = new Schema<any>({ //TODO interface
   role: {
     type: String,
     required: true,
-    default: 'user'
+    default: UserRoleEnum.USER
   },
   age: {
     type: Number,
@@ -29,18 +33,17 @@ export const UserSchema: Schema = new Schema<any>({ //TODO interface
   },
   photo: {
     type: String,
-    required: true
+    required: false
   },
   status: {
     type: String,
     required: true,
-    default: 'pending'
+    default: UserStatusEnum.PENDING
   },
   createAt: {
     type: Date,
-    default: Date.now
-  },
-
+    default: Date.now()
+  }
 });
 
-export const User: Model<any> = model( name: 'users',  UserSchema);
+export const UserModel: Model<any> = model<UserType>('users', UserSchema);
