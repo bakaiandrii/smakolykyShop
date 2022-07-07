@@ -1,0 +1,1 @@
+{"version":3,"file":"actino-enum.js","sourceRoot":"","sources":["../../src/constants/actino-enum.ts"],"names":[],"mappings":";;;AAAA,IAAY,UAEX;AAFD,WAAY,UAAU;IAClB,6DAAiB,CAAA;AACrB,CAAC,EAFW,UAAU,GAAV,kBAAU,KAAV,kBAAU,QAErB","sourcesContent":["export enum ActionEnum {\r\n    USER_REGISTER = 0\r\n}\n"]}

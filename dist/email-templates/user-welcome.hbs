@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Mailers</title>
+</head>
+<body style="background-color: #f8f8f8; padding: 0;margin: 15px; font-family: 'Arial', sans-serif;">
+
+<!-- mailer #1 -->
+
+<div style="max-width: 610px;padding: 0px;margin: 15px auto; background: #f8f8f8; text-align: center; font-family: 'Arial', sans-serif;">
+    <div style="display: block;width: 120px;height: auto;margin: 0 auto;">
+        <img style="width: 100%; height: 100%; display: block;" src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="logo">
+    </div>
+</div>
+<div style="max-width: 610px;margin: 0 auto; background: #fff; text-align: center; font-family: 'Arial', sans-serif;">
+    <div style="display: block; margin: 0 auto;padding: 40px 50px; text-align: left;">
+        <h3 style="font-size: 16px;margin: 0 0 5px; line-height: 30px; color: #232323; font-weight: 700; font-family: 'Arial', sans-serif;">Привіт!</h3>
+        <p style="font-size: 16px;margin: 0; line-height: 30px;color: #606060;font-weight: 400; font-family: 'Arial', sans-serif;">
+           Ми раді вітати Вас у нашому сайті<br>
+           Для підтвердження реєстрації перейдіть за посиланням<br>
+           {{!-- Посилання одноразове й активне протягом 2-х днів.</p> --}}
+        <a style="font-size: 16px;color: #3955A4; line-height: 30px; font-weight: 700; text-decoration: none; font-family: 'Arial', sans-serif;" href="{{frontendUrl}}/confirm/{{token}}">Підтвердити</a>
+    </div>
+</div>
+
+<div style="margin: 40px auto 15px; text-align: center">
+    <h2 style="font-size: 20px; line-height: 23px; font-weight: 700; text-align: center; text-transform: uppercase; color: #232323; font-family: 'Arial', sans-serif;">Дякуємо, що обираєте нас!</h2>
+    {{!-- <a style="font-size: 16px; line-height: 30px; font-weight: 700; text-align: center; text-decoration: none; color: #3955A4; font-family: 'Arial', sans-serif;" href="#">https://blum.com</a> --}}
+</div>
+
+</body>
+</html>

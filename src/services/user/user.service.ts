@@ -7,6 +7,10 @@ class UserService{
 
     return userToCreate.save();
   }
+
+  findOneByParam(findObject: Partial<IUser>) {
+    return UserModel.findOne(findObject);
+  }
 }
 
 export const userService = new UserService();
